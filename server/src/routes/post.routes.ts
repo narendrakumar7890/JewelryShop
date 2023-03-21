@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import { getPosts, createPost, getPost, deletePost, updatePost } from '../controllers/post.controller'
+import { getPosts, createPost, getPost, deletePost, updatePost } from '../controllers/user.controller'
 
 const router = Router();
 
@@ -7,7 +7,7 @@ router.route('/')
     .get(getPosts)
     .post(createPost);
 
-router.route('/:postId')
+router.route('/:userId')
     .get(getPost)
     .delete(deletePost)
     .put(updatePost);
